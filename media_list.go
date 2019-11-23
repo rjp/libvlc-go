@@ -1,6 +1,7 @@
 package vlc
 
-// #cgo LDFLAGS: -lvlc
+// #cgo LDFLAGS: -L/Applications/VLC.app/Contents/MacOS/lib/ -lvlc
+// #cgo CFLAGS: -I/Applications/VLC.app/Contents/MacOS/include/
 // #include <vlc/vlc.h>
 import "C"
 import "errors"

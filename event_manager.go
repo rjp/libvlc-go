@@ -1,7 +1,8 @@
 package vlc
 
 /*
-#cgo LDFLAGS: -lvlc
+#cgo LDFLAGS: -L/Applications/VLC.app/Contents/MacOS/lib/ -lvlc
+#cgo CFLAGS: -I/Applications/VLC.app/Contents/MacOS/include/
 #include <vlc/vlc.h>
 
 typedef const struct libvlc_event_t* clibvlc_event_t;
@@ -12,6 +13,7 @@ static inline int eventAttach(libvlc_event_manager_t* em, libvlc_event_type_t et
 }
 static inline int eventDetach(libvlc_event_manager_t* em, libvlc_event_type_t et, unsigned long userData) {
     libvlc_event_detach(em, et, eventDispatch, (void*)userData);
+    return 0;
 }
 */
 import "C"
